@@ -4,14 +4,15 @@ import pandas as pd
 import inflection
 
 class HealthInsurance:
-    
+   
     def __init__(self):
-        self.home_path              = 'C:\\Users\\yago2\\OneDrive\\Documentos\\Repus\\healt_insurance_cross_sell_project\\'
-        self.annual_premium_scaler  = pickle.load( open ( self.home_path + 'src/features/annual_premium_scaler.pkl', 'rb'))
-        self.age_scaler             = pickle.load( open ( self.home_path + 'src/features/age_scaler.pkl', 'rb' ))
-        self.vintage_scaler         = pickle.load( open ( self.home_path + 'src/features/vintage_scaler.pkl', 'rb' ))
-        self.encode_region_code     = pickle.load( open ( self.home_path + 'src/features/encode_region_code.pkl', 'rb' ))
-        self.encode_policy          = pickle.load( open ( self.home_path + 'src/features/encode_policy.pkl', 'rb' ))
+        #self.home_path              = 'C:\\Users\\yago2\\OneDrive\\Documentos\\Repus\\healt_insurance_cross_sell_project\\'
+        self.home_path              = ''
+        self.annual_premium_scaler  = pickle.load( open ( self.home_path + 'features/annual_premium_scaler.pkl', 'rb'))
+        self.age_scaler             = pickle.load( open ( self.home_path + 'features/age_scaler.pkl', 'rb' ))
+        self.vintage_scaler         = pickle.load( open ( self.home_path + 'features/vintage_scaler.pkl', 'rb' ))
+        self.encode_region_code     = pickle.load( open ( self.home_path + 'features/encode_region_code.pkl', 'rb' ))
+        self.encode_policy          = pickle.load( open ( self.home_path + 'features/encode_policy.pkl', 'rb' ))
 
 
     def rename_columns( df_train ):

@@ -5,12 +5,13 @@ from flask import Flask, request, Response
 from healthinsurance.HealthInsurance import HealthInsurance
 
 # loading model
-model = pickle.load( open( 'models/model_health_insurance.pkl', 'rb') )
+#path = 'C:\\Users\\yago2\\OneDrive\\Documentos\\Repus\\healt_insurance_cross_sell_project\\'
+model = pickle.load( open ( 'models/model_health_insurance.pkl', 'rb') )
 
 # initialize API
 app = Flask( __name__ )
 
-@app.route( '/healthinsurance/predict', methods=['POST'] )
+@app.route( '/predict', methods=['POST'] )
 
 def health_insurance_predict():
     test_json = request.get_json()
@@ -23,7 +24,7 @@ def health_insurance_predict():
         else: # multiple example
             test_raw = pd.DataFrame( test_json, columns=test_json[0].keys() )
             
-        # Instantiate Healt Insurance class
+        # Instantiate HealtInsurance class
         pipeline = HealthInsurance()
         # data cleaning
         df1 = pipeline.rename_columns( test_raw )
@@ -41,9 +42,9 @@ def health_insurance_predict():
     else:
         return Response( '{}', status=200, mimetype='application/json' )
     
-#if __name__ == '__main__':
-#    app.run( '0.0.0.0', debug=True )
-
 if __name__ == '__main__':
-    port = os.environ.get('PORT', 5000)
-    app.run( '0.0.0.0', port=port )
+   app.run( '0.0.0.0', debug=True )
+
+#if __name__ == '__main__':
+#    port = os.environ.get('PORT', 5000)
+#    app.run( '0.0.0.0', port=port )
