@@ -6,7 +6,6 @@ import inflection
 class HealthInsurance:
    
     def __init__(self):
-        #self.home_path              = 'C:\\Users\\yago2\\OneDrive\\Documentos\\Repus\\healt_insurance_cross_sell_project\\'
         self.home_path              = ''
         self.annual_premium_scaler  = pickle.load( open ( self.home_path + 'features/annual_premium_scaler.pkl', 'rb'))
         self.age_scaler             = pickle.load( open ( self.home_path + 'features/age_scaler.pkl', 'rb' ))
