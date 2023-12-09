@@ -14,7 +14,7 @@ class HealthInsurance:
         self.encode_policy          = pickle.load( open ( self.home_path + 'features/encode_policy.pkl', 'rb' ))
 
 
-    def rename_columns( df_train ):
+    def rename_columns( self, df_train ):
         cols_old = df_train.columns
 
         cols_new = []
