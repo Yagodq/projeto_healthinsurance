@@ -147,7 +147,7 @@ Utilizando como base a curva de ganho cumulativo do modelo treinado, usaremos co
 
 ## 7. Conclusão
 
-Como apresentado, o produto final do projeto foi um modelo treinado que prêve e classifica os clientes pelo potencial em adquirir o seguro de automóvel, de modo que a segurado contate primeiramente os clientes com maior potencial, de forma que traga mais assertividade e ganho de tempo para as equipes envolvidas.
+Como apresentado, o produto final do projeto foi um modelo treinado que prêve e classifica os clientes pelo potencial em adquirir o seguro de automóvel, de modo que a seguradora contate primeiramente os clientes com maior potencial, de forma que traga mais assertividade e ganho de tempo para as equipes envolvidas.
 
  ![](images/gif.gif)
 
