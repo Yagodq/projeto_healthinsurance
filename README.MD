@@ -1,4 +1,4 @@
-# **Sistema de Recomendação - Cross-Selling de Seguros**
+# **Propensão de Compra - Cross-Selling de Seguros**
 
 ![](images/car_insu.jpg)
 
